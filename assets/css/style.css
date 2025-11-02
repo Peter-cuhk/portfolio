@@ -909,6 +909,8 @@ body.mode-tech{
 
 .tech-stats span{font-weight:700;color:#f1f5f9;font-size:1.05rem;}
 .tech-stats small{color:#94a3b8;font-size:0.85rem;}
+.tech-stats small a{color:#60a5fa;text-decoration:none;transition:color 0.2s ease;}
+.tech-stats small a:hover{color:#93c5fd;text-decoration:underline;}
 
 .tech-section{display:flex;flex-direction:column;gap:26px;}
 .tech-section-header h2{margin:0;font-size:1.9rem;color:#f8fafc;}
