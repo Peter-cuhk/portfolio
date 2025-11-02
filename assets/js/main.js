@@ -10,6 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initFloatingBackground();
   updateCurrentYear();
   initModeToggle();
+  initVideoModal();
 });
 
 function initHeaderMenu(){
@@ -237,4 +238,60 @@ function initModeToggle(){
   });
 
   applyState(body.classList.contains('mode-tech'));
+}
+
+function initVideoModal(){
+  const thumbnails = document.querySelectorAll('.tech-demo-thumbnail');
+  const modal = document.getElementById('videoModal');
+  const modalVideo = document.getElementById('modalVideo');
+  const closeBtn = modal?.querySelector('.video-modal-close');
+  const backdrop = modal?.querySelector('.video-modal-backdrop');
+
+  if(!modal || !modalVideo){
+    return;
+  }
+
+  // Play preview on hover
+  thumbnails.forEach(thumb => {
+    const video = thumb.querySelector('video');
+    if(video){
+      thumb.addEventListener('mouseenter', () => {
+        video.play().catch(() => {});
+      });
+      thumb.addEventListener('mouseleave', () => {
+        video.pause();
+        video.currentTime = 0;
+      });
+    }
+
+    // Open modal on click
+    thumb.addEventListener('click', () => {
+      const videoSrc = thumb.getAttribute('data-video');
+      if(videoSrc){
+        modalVideo.querySelector('source').src = videoSrc;
+        modalVideo.load();
+        modal.classList.add('active');
+        document.body.style.overflow = 'hidden';
+        modalVideo.play();
+      }
+    });
+  });
+
+  // Close modal
+  const closeModal = () => {
+    modal.classList.remove('active');
+    document.body.style.overflow = '';
+    modalVideo.pause();
+    modalVideo.currentTime = 0;
+  };
+
+  closeBtn?.addEventListener('click', closeModal);
+  backdrop?.addEventListener('click', closeModal);
+  
+  // Close on Escape key
+  document.addEventListener('keydown', (e) => {
+    if(e.key === 'Escape' && modal.classList.contains('active')){
+      closeModal();
+    }
+  });
 }

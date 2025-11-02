@@ -309,13 +309,57 @@
           <p>Technical projects demonstrating deep expertise in robot autonomy, perception, and learning systems.</p>
         </div>
         
-        <div class="tech-demo-video">
-          <h3>Live Demo: Robotic Path Planning & Manipulation</h3>
-          <p>Real-time demonstration of motion planning algorithms and manipulation control in simulation environment.</p>
-          <video controls preload="metadata">
-            <source src="assets/videos/robot-demo.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-          </video>
+        <div class="tech-demo-showcase">
+          <div class="tech-demo-left">
+            <div class="tech-demo-thumbnail" data-video="assets/videos/robot-demo.mp4">
+              <video preload="metadata" muted loop>
+                <source src="assets/videos/robot-demo.mp4" type="video/mp4">
+              </video>
+              <div class="demo-play-overlay">
+                <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <polygon points="10 8 16 12 10 16 10 8"></polygon>
+                </svg>
+              </div>
+              <span class="demo-label">Live Demo</span>
+            </div>
+          </div>
+          <div class="tech-demo-right">
+            <h3>Robotic Path Planning & Manipulation</h3>
+            <p class="demo-subtitle">Real-time demonstration of motion planning algorithms and manipulation control in simulation environment.</p>
+            <div class="demo-framework">
+              <h4>Implementation Framework</h4>
+              <ul>
+                <li><strong>Perception Module:</strong> Point cloud processing and object detection using PCL and OpenCV</li>
+                <li><strong>Planning Layer:</strong> RRT* path planning with collision avoidance in constrained workspace</li>
+                <li><strong>Control System:</strong> Joint-space trajectory optimization with inverse kinematics solver</li>
+                <li><strong>Simulation:</strong> CoppeliaSim environment with 6-DOF manipulator and dynamic obstacles</li>
+              </ul>
+              <div class="demo-tech-tags">
+                <span class="demo-tag">ROS 2</span>
+                <span class="demo-tag">Python</span>
+                <span class="demo-tag">C++</span>
+                <span class="demo-tag">MoveIt2</span>
+                <span class="demo-tag">PCL</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 全屏视频模态框 -->
+        <div class="video-modal" id="videoModal">
+          <div class="video-modal-backdrop"></div>
+          <div class="video-modal-content">
+            <button class="video-modal-close" aria-label="Close video">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="18" y1="6" x2="6" y2="18"></line>
+                <line x1="6" y1="6" x2="18" y2="18"></line>
+              </svg>
+            </button>
+            <video controls id="modalVideo">
+              <source src="" type="video/mp4">
+            </video>
+          </div>
         </div>
 
         <div class="tech-project-grid">
