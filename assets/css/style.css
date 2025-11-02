@@ -122,6 +122,35 @@ body.mode-tech .mode-toggle{
   border:1px solid rgba(148,163,184,0.28);
 }
 
+.tech-demo-video{
+  background:linear-gradient(140deg, rgba(30,41,59,0.6), rgba(15,23,42,0.9));
+  border:1px solid rgba(148,163,184,0.12);
+  border-radius:20px;
+  padding:32px;
+  margin-bottom:40px;
+  box-shadow:0 24px 60px rgba(3,7,18,0.55);
+}
+
+.tech-demo-video h3{
+  margin:0 0 12px 0;
+  color:#f8fafc;
+  font-size:1.5rem;
+}
+
+.tech-demo-video p{
+  margin:0 0 20px 0;
+  color:#cbd5f5;
+  line-height:1.7;
+}
+
+.tech-demo-video video{
+  width:100%;
+  max-width:960px;
+  border-radius:12px;
+  background:#000;
+  box-shadow:0 16px 40px rgba(3,7,18,0.6);
+}
+
 .layout-liquid{position:relative;}
 .layout-tech{display:none;min-height:100vh;}
 
