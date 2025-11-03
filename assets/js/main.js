@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initFloatingBackground();
   updateCurrentYear();
   initModeToggle();
-  initMediumZoom();
+  initPublicationModule();
 });
 
 function initHeaderMenu(){
@@ -240,58 +240,93 @@ function initModeToggle(){
   applyState(body.classList.contains('mode-tech'));
 }
 
-function initVideoModal(){
-  const thumbnails = document.querySelectorAll('.tech-demo-thumbnail');
-  const modal = document.getElementById('videoModal');
-  const modalVideo = document.getElementById('modalVideo');
-  const closeBtn = modal?.querySelector('.video-modal-close');
-  const backdrop = modal?.querySelector('.video-modal-backdrop');
+function initPublicationModule(){
+  if(typeof mediumZoom === 'function'){
+    mediumZoom('[data-zoomable]', {
+      background:'rgba(4,7,15,0.92)',
+      margin:24,
+      scrollOffset:0
+    });
+  }
 
-  if(!modal || !modalVideo){
+  const hideLabel = 'Hide contributors';
+
+  if(window.jQuery){
+    $('.publication-more-authors').each(function(){
+      const $trigger = $(this);
+      const collapsed = $trigger.data('collapsed') || $trigger.text();
+      const fullText = $trigger.data('full') || '';
+      const $extra = $trigger.siblings('.publication-authors-extra');
+      let expanded = false;
+      let typingTimer = null;
+
+      $trigger.on('click', function(){
+        if(!$extra.length){
+          return;
+        }
+
+        if(!expanded){
+          const characters = Array.from(String(fullText));
+          $extra.text('').addClass('is-visible');
+          let index = 0;
+          clearInterval(typingTimer);
+          typingTimer = window.setInterval(() => {
+            if(index >= characters.length){
+              window.clearInterval(typingTimer);
+              return;
+            }
+            $extra.text($extra.text() + characters[index]);
+            index += 1;
+          }, 26);
+          $trigger.text(hideLabel);
+        }else{
+          window.clearInterval(typingTimer);
+          $extra.removeClass('is-visible').text('');
+          $trigger.text(collapsed);
+        }
+
+        expanded = !expanded;
+      });
+    });
     return;
   }
 
-  // Play preview on hover
-  thumbnails.forEach(thumb => {
-    const video = thumb.querySelector('video');
-    if(video){
-      thumb.addEventListener('mouseenter', () => {
-        video.play().catch(() => {});
-      });
-      thumb.addEventListener('mouseleave', () => {
-        video.pause();
-        video.currentTime = 0;
-      });
-    }
+  const triggers = document.querySelectorAll('.publication-more-authors');
+  triggers.forEach(trigger => {
+    const collapsed = trigger.getAttribute('data-collapsed') || trigger.textContent || '';
+    const fullText = trigger.getAttribute('data-full') || '';
+    const extra = trigger.parentElement?.querySelector('.publication-authors-extra');
+    let expanded = false;
+    let typingTimer = 0;
 
-    // Open modal on click
-    thumb.addEventListener('click', () => {
-      const videoSrc = thumb.getAttribute('data-video');
-      if(videoSrc){
-        modalVideo.querySelector('source').src = videoSrc;
-        modalVideo.load();
-        modal.classList.add('active');
-        document.body.style.overflow = 'hidden';
-        modalVideo.play();
+    trigger.addEventListener('click', () => {
+      if(!extra){
+        return;
       }
+
+      if(!expanded){
+        const characters = Array.from(fullText);
+        extra.textContent = '';
+        extra.classList.add('is-visible');
+        let index = 0;
+        window.clearInterval(typingTimer);
+        typingTimer = window.setInterval(() => {
+          if(index >= characters.length){
+            window.clearInterval(typingTimer);
+            return;
+          }
+          extra.textContent += characters[index];
+          index += 1;
+        }, 26);
+        trigger.textContent = hideLabel;
+      }else{
+        window.clearInterval(typingTimer);
+        extra.classList.remove('is-visible');
+        extra.textContent = '';
+        trigger.textContent = collapsed;
+      }
+
+      expanded = !expanded;
     });
-  });
-
-  // Close modal
-  const closeModal = () => {
-    modal.classList.remove('active');
-    document.body.style.overflow = '';
-    modalVideo.pause();
-    modalVideo.currentTime = 0;
-  };
-
-  closeBtn?.addEventListener('click', closeModal);
-  backdrop?.addEventListener('click', closeModal);
-  
-  // Close on Escape key
-  document.addEventListener('keydown', (e) => {
-    if(e.key === 'Escape' && modal.classList.contains('active')){
-      closeModal();
-    }
   });
 }
