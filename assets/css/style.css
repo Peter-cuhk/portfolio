@@ -1141,6 +1141,8 @@ body.mode-tech{
 .tech-experience-item header{display:flex;flex-direction:column;gap:4px;}
 .tech-experience-item h3{margin:0;color:#f8fafc;}
 .tech-experience-item span{color:#64748b;font-size:0.88rem;letter-spacing:0.05em;text-transform:uppercase;}
+.tech-experience-item span a{color:#60a5fa;text-decoration:none;transition:color 0.2s ease;}
+.tech-experience-item span a:hover{color:#93c5fd;text-decoration:underline;}
 .tech-experience-item p{margin:0;color:#cbd5f5;line-height:1.65;}
 .tech-experience-item ul{margin:0;padding-left:18px;color:#9fb1d8;line-height:1.55;}
 
