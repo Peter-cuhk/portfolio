@@ -309,56 +309,83 @@
           <p>Technical projects demonstrating deep expertise in robot autonomy, perception, and learning systems.</p>
         </div>
         
+        <!-- Publication-Style Demo Showcase -->
         <div class="tech-demo-showcase">
-          <div class="tech-demo-left">
-            <div class="tech-demo-thumbnail" data-video="assets/videos/robot-demo.mp4">
-              <video preload="metadata" muted loop>
-                <source src="assets/videos/robot-demo.mp4" type="video/mp4">
-              </video>
-              <div class="demo-play-overlay">
-                <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <circle cx="12" cy="12" r="10"></circle>
-                  <polygon points="10 8 16 12 10 16 10 8"></polygon>
-                </svg>
-              </div>
-              <span class="demo-label">Live Demo</span>
+          <div class="row">
+            <!-- Left Column: Preview + Badge -->
+            <div class="col-sm-2">
+              <span class="publication-badge">DEMO</span>
+              <figure class="demo-figure">
+                <picture>
+                  <source 
+                    type="image/webp" 
+                    srcset="assets/videos/robot-demo.mp4 480w,
+                            assets/videos/robot-demo.mp4 800w,
+                            assets/videos/robot-demo.mp4 1400w"
+                    sizes="(max-width: 480px) 480px, (max-width: 800px) 800px, 1400px"
+                    class="responsive-img-srcset">
+                  <img 
+                    src="assets/videos/robot-demo.mp4" 
+                    alt="Robotic Manipulation Demo Preview"
+                    class="demo-preview-img w-100 rounded"
+                    data-zoomable
+                    onerror="this.onerror=null; this.closest('picture').querySelector('.responsive-img-srcset')?.remove();">
+                </picture>
+              </figure>
             </div>
-          </div>
-          <div class="tech-demo-right">
-            <h3>Robotic Path Planning & Manipulation</h3>
-            <p class="demo-subtitle">Real-time demonstration of motion planning algorithms and manipulation control in simulation environment.</p>
-            <div class="demo-framework">
-              <h4>Implementation Framework</h4>
-              <ul>
-                <li><strong>Perception Module:</strong> Point cloud processing and object detection using PCL and OpenCV</li>
-                <li><strong>Planning Layer:</strong> RRT* path planning with collision avoidance in constrained workspace</li>
-                <li><strong>Control System:</strong> Joint-space trajectory optimization with inverse kinematics solver</li>
-                <li><strong>Simulation:</strong> CoppeliaSim environment with 6-DOF manipulator and dynamic obstacles</li>
-              </ul>
-              <div class="demo-tech-tags">
-                <span class="demo-tag">ROS 2</span>
-                <span class="demo-tag">Python</span>
-                <span class="demo-tag">C++</span>
-                <span class="demo-tag">MoveIt2</span>
-                <span class="demo-tag">PCL</span>
-              </div>
-            </div>
-          </div>
-        </div>
 
-        <!-- 全屏视频模态框 -->
-        <div class="video-modal" id="videoModal">
-          <div class="video-modal-backdrop"></div>
-          <div class="video-modal-content">
-            <button class="video-modal-close" aria-label="Close video">
-              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <line x1="18" y1="6" x2="6" y2="18"></line>
-                <line x1="6" y1="6" x2="18" y2="18"></line>
-              </svg>
-            </button>
-            <video controls id="modalVideo">
-              <source src="" type="video/mp4">
-            </video>
+            <!-- Right Column: Content -->
+            <div class="col-sm-8">
+              <h3 class="demo-title">Autonomous Robotic Manipulation System with Real-time Vision Feedback and Adaptive Control</h3>
+              
+              <div class="demo-authors">
+                <span class="author-name">Yuxiang Xie</span>
+              </div>
+
+              <div class="demo-meta">
+                <span class="demo-venue">Personal Research Project</span>
+                <span class="demo-year">· 2024</span>
+              </div>
+
+              <p class="demo-abstract">
+                An integrated robotic system for autonomous object manipulation featuring multi-modal perception, 
+                intelligent motion planning, and adaptive control with real-time force feedback. The system demonstrates 
+                robust performance in pick-and-place tasks with dynamic obstacle avoidance and grasp stability optimization.
+              </p>
+
+              <div class="demo-framework">
+                <h4>Technical Framework</h4>
+                <ul class="framework-list">
+                  <li><strong>Perception Module:</strong> RealSense D435i depth camera + YOLOv8 object detection + PCL point cloud processing for 3D scene understanding</li>
+                  <li><strong>Planning Layer:</strong> MoveIt motion planning framework + RRT* path optimization + real-time collision avoidance in constrained workspace</li>
+                  <li><strong>Control System:</strong> PID joint-space control + force/torque feedback + adaptive grasp stability monitoring</li>
+                  <li><strong>Simulation:</strong> Gazebo physics engine + ROS Noetic integration + real-time visualization and debugging tools</li>
+                </ul>
+              </div>
+
+              <div class="demo-links">
+                <a href="assets/videos/robot-demo.mp4" class="btn demo-link-video" target="_blank" rel="noopener">
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+                    <path d="M6 2L14 8L6 14V2Z"/>
+                  </svg>
+                  Video
+                </a>
+                <a href="#" class="btn demo-link-code">
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+                    <path d="M5 3L1 8L5 13M11 3L15 8L11 13M9 1L7 15"/>
+                  </svg>
+                  Code
+                </a>
+              </div>
+
+              <div class="demo-tech-tags">
+                <span class="demo-tag">ROS</span>
+                <span class="demo-tag">Computer Vision</span>
+                <span class="demo-tag">Motion Planning</span>
+                <span class="demo-tag">Deep Learning</span>
+                <span class="demo-tag">Control Systems</span>
+              </div>
+            </div>
           </div>
         </div>
 
@@ -550,6 +577,7 @@
     </footer>
   </div>
 
+  <script defer src="https://cdn.jsdelivr.net/npm/medium-zoom@1.0.8/dist/medium-zoom.min.js"></script>
   <script src="assets/js/main.js" defer></script>
 </body>
 </html>

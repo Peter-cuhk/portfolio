@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initFloatingBackground();
   updateCurrentYear();
   initModeToggle();
-  initVideoModal();
+  initMediumZoom();
 });
 
 function initHeaderMenu(){
