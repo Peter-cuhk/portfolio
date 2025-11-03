@@ -387,22 +387,21 @@
             </div>
           </div>
           <div class="tech-demo-right">
-            <h3>Collaborative Mobile Manipulation Fleet</h3>
-            <p class="demo-subtitle">Coordinated warehouse robots combining LiDAR SLAM navigation with shared manipulation tasks under human supervision.</p>
+            <h3>Object Pose Estimation & Stacking via Eye-to-Hand Camera</h3>
+            <p class="demo-subtitle">6D object pose estimation with an eye-to-hand setup enabling automated stacking tasks.</p>
             <div class="demo-framework">
               <h4>Implementation Framework</h4>
               <ul>
-                <li><strong>Perception:</strong> Multi-sensor fusion of 3D LiDAR and RGB-D cameras for dynamic obstacle tracking</li>
-                <li><strong>Fleet Coordination:</strong> Decentralized task allocator with consensus messaging over ROS 2 DDS</li>
-                <li><strong>Manipulation:</strong> Isaac Sim-trained grasp policies deployed via on-board Jetson Orin accelerators</li>
-                <li><strong>Monitoring:</strong> Web-based operator console with latency-aware telemetry and safety interlocks</li>
+                <li><strong>Perception:</strong> Achieved 6D pose estimation using an eye-to-hand camera configuration.</li>
+                <li><strong>Control:</strong> Drove the robotic arm to complete precise stacking based on the predicted poses.</li>
+                <li><strong>Optimization:</strong> Jointly refined estimation latency and arm motion accuracy for reliable execution.</li>
               </ul>
               <div class="demo-tech-tags">
                 <span class="demo-tag">ROS 2</span>
-                <span class="demo-tag">Isaac Sim</span>
-                <span class="demo-tag">CUDA</span>
-                <span class="demo-tag">LiDAR SLAM</span>
-                <span class="demo-tag">Jetson Orin</span>
+                <span class="demo-tag">6D Pose</span>
+                <span class="demo-tag">Eye-to-Hand</span>
+                <span class="demo-tag">CoppeliaSim</span>
+                <span class="demo-tag">C++</span>
               </div>
             </div>
           </div>
