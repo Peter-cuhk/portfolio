@@ -383,6 +383,43 @@
           </div>
         </div>
 
+        <div class="tech-demo-showcase">
+          <div class="tech-demo-left">
+            <div class="tech-demo-thumbnail" data-video="assets/videos/robot-demo-3.mp4">
+              <video preload="metadata" muted loop>
+                <source src="assets/videos/robot-demo-3.mp4" type="video/mp4">
+              </video>
+              <div class="demo-play-overlay">
+                <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <polygon points="10 8 16 12 10 16 10 8"></polygon>
+                </svg>
+              </div>
+              <span class="demo-label">Live Demo</span>
+            </div>
+          </div>
+          <div class="tech-demo-right">
+            <h3>Collaborative Mobile Manipulation Fleet</h3>
+            <p class="demo-subtitle">Coordinated warehouse robots combining LiDAR SLAM navigation with shared manipulation tasks under human supervision.</p>
+            <div class="demo-framework">
+              <h4>Implementation Framework</h4>
+              <ul>
+                <li><strong>Perception:</strong> Multi-sensor fusion of 3D LiDAR and RGB-D cameras for dynamic obstacle tracking</li>
+                <li><strong>Fleet Coordination:</strong> Decentralized task allocator with consensus messaging over ROS 2 DDS</li>
+                <li><strong>Manipulation:</strong> Isaac Sim-trained grasp policies deployed via on-board Jetson Orin accelerators</li>
+                <li><strong>Monitoring:</strong> Web-based operator console with latency-aware telemetry and safety interlocks</li>
+              </ul>
+              <div class="demo-tech-tags">
+                <span class="demo-tag">ROS 2</span>
+                <span class="demo-tag">Isaac Sim</span>
+                <span class="demo-tag">CUDA</span>
+                <span class="demo-tag">LiDAR SLAM</span>
+                <span class="demo-tag">Jetson Orin</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
         <!-- 全屏视频模态框 -->
         <div class="video-modal" id="videoModal">
           <div class="video-modal-backdrop"></div>
