@@ -125,8 +125,8 @@ body.mode-tech .mode-toggle{
 
 .tech-demo-showcase{
   display:grid;
-  grid-template-columns:220px 1fr;
-  gap:28px;
+  grid-template-columns:260px minmax(0, 1fr);
+  gap:26px;
   background:rgba(19,28,44,0.75);
   border:1px solid rgba(148,163,184,0.16);
   border-radius:18px;
@@ -144,7 +144,7 @@ body.mode-tech .mode-toggle{
 .tech-demo-thumbnail{
   position:relative;
   width:100%;
-  max-width:200px;
+  max-width:240px;
   aspect-ratio:16/9;
   border-radius:14px;
   overflow:hidden;
@@ -188,6 +188,7 @@ body.mode-tech .mode-toggle{
   display:flex;
   flex-direction:column;
   gap:12px;
+  max-width:640px;
 }
 
 .tech-demo-right h3{
@@ -219,7 +220,7 @@ body.mode-tech .mode-toggle{
 
 .demo-framework ul{
   margin:0;
-  padding-left:18px;
+  padding-left:16px;
   color:#cbd5f5;
   line-height:1.6;
 }
