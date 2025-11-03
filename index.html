@@ -352,22 +352,21 @@
             </div>
           </div>
           <div class="tech-demo-right">
-            <h3>Vision-Guided Suturing Assistant</h3>
-            <p class="demo-subtitle">Autonomous needle hand-off and suture tracking with real-time perception feedback in a dual-arm surgical setup.</p>
+            <h3>Object Detection-Driven Robot Arm Tracking</h3>
+            <p class="demo-subtitle">Real-time, low-latency target following for robotic arms powered by a custom object detection pipeline.</p>
             <div class="demo-framework">
               <h4>Implementation Framework</h4>
               <ul>
-                <li><strong>Vision Stack:</strong> Stereo depth fusion with YOLOv8-based instrument segmentation at 40 FPS</li>
-                <li><strong>Task Planner:</strong> Behavior tree coordinating needle hand-off and collision-aware arm sequencing</li>
-                <li><strong>Force Feedback:</strong> Admittance control tuned for delicate tissue interaction using impedance models</li>
-                <li><strong>Evaluation:</strong> Reproduced 20 suturing trials inside a da Vinci Research Kit simulator</li>
+                <li><strong>Detection Core:</strong> Deployed a customized object detection model to recognize arm targets at high speed.</li>
+                <li><strong>Latency Optimization:</strong> Tuned the inference and control pipeline to minimize end-to-end delay for responsive tracking.</li>
+                <li><strong>Tracking Deployment:</strong> Realized precise motion tracking inside a virtual environment for closed-loop evaluation.</li>
               </ul>
               <div class="demo-tech-tags">
                 <span class="demo-tag">ROS 2</span>
-                <span class="demo-tag">TensorFlow</span>
-                <span class="demo-tag">C++</span>
+                <span class="demo-tag">YOLOv8</span>
+                <span class="demo-tag">TensorRT</span>
                 <span class="demo-tag">OpenCV</span>
-                <span class="demo-tag">dVRK</span>
+                <span class="demo-tag">C++</span>
               </div>
             </div>
           </div>
