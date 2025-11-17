@@ -1,0 +1,327 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Yuxiang Xie · Robotics Resume</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    :root {
+      color-scheme: light;
+      font-family: "Inter", "Segoe UI", Arial, sans-serif;
+      --text: #111827;
+      --accent: #1d4ed8;
+      --muted: #4b5563;
+      --border: #e5e7eb;
+      --section-gap: 28px;
+    }
+    @page {
+      size: A4;
+      margin: 14mm 18mm;
+    }
+    body {
+      margin: 0;
+      padding: 40px 0;
+      background: #f4f6fb;
+      color: var(--text);
+    }
+    .page {
+      width: min(794px, calc(100% - 48px));
+      margin: 0 auto;
+      background: #fff;
+      border: 1px solid var(--border);
+      box-shadow: 0 12px 32px rgba(15, 23, 42, 0.08);
+      border-radius: 16px;
+      padding: 48px 56px;
+    }
+    header {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 20px;
+      margin-bottom: var(--section-gap);
+    }
+    h1 {
+      margin: 0;
+      font-size: 2.2rem;
+      letter-spacing: 0.02em;
+    }
+    .headline {
+      font-weight: 600;
+      color: var(--accent);
+      text-transform: uppercase;
+      font-size: 0.92rem;
+      letter-spacing: 0.32em;
+    }
+    .contact {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px 24px;
+      font-size: 0.95rem;
+    }
+    .contact .highlight {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 12px;
+      border-radius: 999px;
+      background: rgba(29, 78, 216, 0.12);
+      border: 1px solid rgba(29, 78, 216, 0.3);
+      font-weight: 600;
+    }
+    .contact a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+    .contact a:hover {
+      text-decoration: underline;
+    }
+    section {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin-bottom: var(--section-gap);
+    }
+    h2 {
+      margin: 0;
+      font-size: 1.15rem;
+      letter-spacing: 0.12em;
+      color: var(--muted);
+      text-transform: uppercase;
+    }
+    .item {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+    .item-header {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 6px 16px;
+      font-weight: 600;
+    }
+    .item-meta {
+      font-size: 0.92rem;
+      color: var(--muted);
+    }
+    ul {
+      margin: 0;
+      padding-left: 20px;
+      color: #1f2937;
+      font-size: 0.98rem;
+      line-height: 1.55;
+    }
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 6px 12px;
+      border-radius: 999px;
+      border: 1px solid rgba(29, 78, 216, 0.25);
+      background: rgba(29, 78, 216, 0.08);
+      font-size: 0.85rem;
+      color: var(--accent);
+      margin-top: 6px;
+    }
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 16px;
+    }
+    .skills-grid ul {
+      padding-left: 18px;
+    }
+    @media print {
+      body {
+        background: #fff;
+        padding: 0;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+      .page {
+        border: none;
+        box-shadow: none;
+        border-radius: 0;
+        width: 100%;
+        max-width: none;
+        margin: 0;
+        padding: 0;
+      }
+      a {
+        color: var(--text);
+        text-decoration: none;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <header>
+      <span class="headline">Robotics · AI · Surgical Autonomy</span>
+      <h1>Yuxiang Xie</h1>
+      <div class="contact">
+        <span>Shenzhen, China</span>
+        <span>Email: <a href="mailto:124090742@link.cuhk.edu.cn">124090742@link.cuhk.edu.cn</a></span>
+        <span>Phone: +86 177 5827 9107</span>
+        <span>GitHub: <a href="https://github.com/Peter-cuhk" target="_blank" rel="noopener">github.com/Peter-cuhk</a></span>
+        <span class="highlight">Portfolio: <a href="https://peter-cuhk.github.io/portfolio/" target="_blank" rel="noopener">peter-cuhk.github.io/portfolio/</a></span>
+      </div>
+    </header>
+
+    <section>
+      <h2>Summary</h2>
+      <div class="item">
+        <ul>
+          <li>Robotics & AI engineer training at CUHK-Shenzhen (GPA 3.82 / 4.0, Top 5%) focusing on surgical robot autonomy and embodied intelligence.</li>
+          <li>Build end-to-end planning and perception systems, transforming lab research into reliable demos and community-facing products.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <h2>Education</h2>
+      <div class="item">
+        <div class="item-header">
+          <span>The Chinese University of Hong Kong, Shenzhen — BEng Electrical and Computer Engineering</span>
+          <span class="item-meta">Sep 2024 – Present</span>
+        </div>
+        <div class="item-meta">GPA 3.82 / 4.0 · Dean's List · Undergraduate Research Awards recipient</div>
+        <ul>
+          <li>Research focus on robot planning and control in complex environments with learning-driven perception.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <h2>Research Experience</h2>
+      <div class="item">
+        <div class="item-header">
+          <span>Medical Robotics Lab, CUHK-Shenzhen — Research Assistant</span>
+          <span class="item-meta">Shenzhen, China | 2024 – Present</span>
+        </div>
+        <ul>
+          <li>Build autonomy and perception stacks for surgical manipulators under Prof. Fangxun Zhong and Prof. Yunhui Liu, uniting motion planning with learning-driven vision.</li>
+          <li>Prototype suturing assistance workflows and LiDAR-guided fleet coordination showcased in lab demos with reproducible evaluation metrics.</li>
+        </ul>
+      </div>
+      <div class="item">
+        <div class="item-header">
+          <span>Peking University — Embodied AI Visiting Student</span>
+          <span class="item-meta">Beijing, China | 2025</span>
+        </div>
+        <ul>
+          <li>Completed Peking University's Embodied AI summer program, tackling policy learning modules that emphasized planning, control, and perception.</li>
+          <li>Participated in Peking University research seminars to exchange robotics ideas and set up follow-on collaborations.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <h2>Projects</h2>
+      <div class="item">
+        <div class="item-header">
+          <span>Surgical Robot Autonomy Pipeline</span>
+        </div>
+        <ul>
+          <li>Fused learning-based perception with ROS 2 motion planning inside CoppeliaSim; ran trajectory optimization with collision-free guarantees in cluttered scenarios.</li>
+          <li>Developed metric harness for accuracy, latency, and recovery benchmarking adopted by the research group.</li>
+        </ul>
+      </div>
+      <div class="item">
+        <div class="item-header">
+          <span>Object Detection Driven Robot Arm Tracking</span>
+        </div>
+        <ul>
+          <li>Deployed customized YOLOv8 model with TensorRT acceleration, powering low-latency closed-loop tracking in simulation.</li>
+          <li>Tuned inference and control to hit responsive manipulation targets for high-speed arm motion.</li>
+        </ul>
+      </div>
+      <div class="item">
+        <div class="item-header">
+          <span>Eye-to-Hand Pose Estimation & Stacking</span>
+        </div>
+        <ul>
+          <li>Delivered 6D pose estimation using an eye-to-hand camera configuration, automating precise stacking tasks.</li>
+          <li>Co-optimized perception latency and control accuracy to boost task success reliability.</li>
+        </ul>
+      </div>
+      <div class="item">
+        <div class="item-header">
+          <span>Monocular Endoscopic Depth Estimation</span>
+        </div>
+        <ul>
+          <li>Combined Depth Anything predictions with optical-flow refinement for millimeter-precision depth recovery in endoscopic scenes.</li>
+          <li>Validated reconstruction accuracy against calibration phantoms to meet surgical research benchmarks.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <h2>Leadership & Impact</h2>
+      <div class="item">
+        <div class="item-header">
+          <span>Independent Entrance Coaching Platform — Founder</span>
+          <span class="item-meta">China (Remote) | 2022 – Present</span>
+        </div>
+        <ul>
+          <li>Built profitable guidance business connecting elite mentors with students, achieving RMB 80K+ monthly revenue.</li>
+          <li>Led a 20+ mentor network, automated client intake, and expanded reach through Rednotes and TikTok growth funnels.</li>
+        </ul>
+      </div>
+      <div class="item">
+        <div class="item-header">
+          <span>World Internet Conference (Wuzhen Summit) — Media & Communications Volunteer</span>
+          <span class="item-meta">Wuzhen, China | 2023</span>
+        </div>
+        <ul>
+          <li>Produced photography, video edits, and PR assets that expanded multi-channel audience reach.</li>
+          <li>Coordinated with media teams to streamline publication workflows under tight event timelines.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <h2>Honors & Activities</h2>
+      <ul>
+        <li>Columbia University Honor Program Member.</li>
+        <li>Top Ten Students, Tongxiang Senior High School.</li>
+        <li>Language: Mandarin (native), English (IELTS 6.5).</li>
+        <li>Extracurricular: Level 9 Hard-tip Calligrapher; National Second-Class Athlete (Swimming); Member, Tongxiang Photographers Association.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Technical Skills</h2>
+      <div class="skills-grid">
+        <div>
+          <div class="pill">Programming</div>
+          <ul>
+            <li>Python &amp; Lua for robotics scripting</li>
+            <li>MATLAB for control and simulation</li>
+            <li>CoppeliaSim scripting &amp; ROS 2 integration</li>
+            <li>JavaScript / TypeScript for dashboards</li>
+          </ul>
+        </div>
+        <div>
+          <div class="pill">Tools &amp; Platforms</div>
+          <ul>
+            <li>PyTorch, OpenCV</li>
+            <li>Git, Notion, Figma</li>
+            <li>CoppeliaSim for robotics simulation and development</li>
+          </ul>
+        </div>
+        <div>
+          <div class="pill">Domain Expertise</div>
+          <ul>
+            <li>Robot motion planning &amp; control in complex spaces</li>
+            <li>Learning-driven perception for surgical settings</li>
+            <li>Depth estimation in surgical scenes</li>
+            <li>Forward &amp; inverse kinematics, PID tuning, model predictive control (MPC), trajectory smoothing</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </div>
+</body>
+</html>
