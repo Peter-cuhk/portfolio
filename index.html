@@ -413,9 +413,8 @@
         <div class="tech-demo-showcase">
           <div class="tech-demo-left">
             <div class="tech-demo-thumbnail" data-video="assets/videos/afc03de3829acc3c7c7cd8836da3fa2f_raw.mp4">
-              <video preload="metadata" muted loop playsinline autoplay poster="assets/images/robot-demo-800.webp">
+              <video preload="metadata" muted loop playsinline data-autoplay>
                 <source src="assets/videos/afc03de3829acc3c7c7cd8836da3fa2f_raw.mp4" type="video/mp4">
-                您的浏览器暂不支持视频播放。
               </video>
               <div class="demo-play-overlay">
                 <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -427,6 +426,21 @@
           </div>
           <div class="tech-demo-right">
             <h3>Monocular Endoscopic Depth Estimation (Depth Anything)</h3>
+            <p class="demo-subtitle">Millimeter-precision depth estimation in endoscopic scenes using Depth Anything with optical-flow refinement.</p>
+            <div class="demo-framework">
+              <h4>Implementation Framework</h4>
+              <ul>
+                <li><strong>Perception:</strong> Fuse Depth Anything predictions with optical-flow refinement to stabilize depth.</li>
+                <li><strong>Calibration:</strong> Benchmark against surgical calibration phantoms for quantitative accuracy.</li>
+                <li><strong>Integration:</strong> Provide reliable depth cues for downstream surgical scene understanding.</li>
+              </ul>
+              <div class="demo-tech-tags">
+                <span class="demo-tag">Depth Anything</span>
+                <span class="demo-tag">Optical Flow</span>
+                <span class="demo-tag">Python</span>
+                <span class="demo-tag">Surgical</span>
+              </div>
+            </div>
           </div>
         </div>
 
@@ -447,12 +461,6 @@
         </div>
 
         <div class="tech-project-grid">
-          <article class="tech-project">
-            <header>
-              <h3>Surgical Robot Autonomy Pipeline</h3>
-              <span class="tech-project-meta">Python · ROS 2 · Simulation Tooling</span>
-            </header>
-          </article>
           <article class="tech-project">
             <header>
               <h3>Monocular Endoscopic Depth Estimation</h3>
